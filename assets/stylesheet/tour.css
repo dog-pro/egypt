@@ -1,0 +1,111 @@
+/* ------------------------------
+観光名所（tour）
+------------------------------*/
+.tour_cover {
+  max-width: 1280px;
+  width: 100%;
+  padding: 100px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tour_top {
+  display: flex;
+  margin: 20px 0;
+}
+
+.tour {
+  background: -webkit-linear-gradient(top, #dddddd, #17140f);
+  padding: 5%;
+  margin-top: 3%;
+}
+
+.tour_right {
+  width: 50%;
+  padding: 10px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.tour_title {
+  color: #fff;
+  background-color: #000;
+}
+
+.tour_top h3 {
+  line-height: 3;
+}
+
+.tour h4 {
+  line-height: 2;
+}
+
+.tour h5 {
+  line-height: 2;
+}
+
+.tour p {
+  line-height: 2;
+}
+
+.tour ul {
+  background-color: #1e1b16;
+  border: none;
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  list-style: none;
+  overflow: hidden;
+}
+
+.tour ul li:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: -webkit-right;
+}
+
+.tour li {
+  margin-bottom: 40px;
+  text-decoration: none;
+  display: flex;
+}
+
+.tour ul li img {
+  transform: skew(0deg, -2deg);
+  margin: 0 20px;
+}
+
+/* SP style */
+@media screen and (max-width: 768px) {
+  .tour_cover {
+    width: 90%;
+  }
+
+  .tour_top {
+    display: block;
+  }
+
+  .tour_top img {
+    width: 100%;
+  }
+
+  .tour ul {
+    width: 90%;
+  }
+
+  .tour li {
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .tour ul li img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .tour_right {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+}

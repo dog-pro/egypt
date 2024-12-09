@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* PC style */
+@media screen and (min-width: 769px) {
+  /* ページ再読み込み時、スライダーが一瞬縦並びになる現象の対処 */
+  .slider {
+    visibility: hidden;
+  }
+
+  .slider.slick-initialized {
+    visibility: visible;
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+  }
+
+  .slick-prev {
+    left: 10px;
+  }
+
+  .slick-next {
+    right: 10px;
+  }
+
+  .slick-dots {
+    text-align: right;
+  }
+
+  .slick-dots li button:before {
+    display: block;
+    width: 24px;
+    height: 1px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #c3c3c3;
+    -webkit-transition: background-color 0.5s ease-in-out 0s;
+    transition: background-color 0.5s ease-in-out 0s;
+  }
+
+  .slick-dots li.slick-active button:before {
+    background-color: #000;
+  }
+
+  .slick-prev:before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url("../image/circle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .slick-next:before {
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url("../image/circle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/* SP style */
+@media screen and (max-width: 768px) {
+  /* ページ再読み込み時、スライダーが一瞬縦並びになる現象の対処 */
+
+  .slider {
+    visibility: hidden;
+  }
+
+  .slider.slick-initialized {
+    visibility: visible;
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+  }
+
+  .slick-prev {
+    left: 5%;
+  }
+
+  .slick-next {
+    right: 5%;
+  }
+
+  .slick-dots {
+    text-align: right;
+  }
+
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 1px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .slick-dots li button:before {
+    display: block;
+    width: 12px;
+    height: 1px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #c3c3c3;
+    -webkit-transition: background-color 0.5s ease-in-out 0s;
+    transition: background-color 0.5s ease-in-out 0s;
+  }
+
+  .slick-dots li.slick-active button:before {
+    background-color: #000;
+  }
+
+  .slick-prev:before {
+    content: "";
+    position: absolute;
+    right: -80%;
+    top: 25%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url("../image/circle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .slick-next:before {
+    content: "";
+    position: absolute;
+    left: -80%;
+    top: 25%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-image: url("../image/circle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

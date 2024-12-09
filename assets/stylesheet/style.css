@@ -1,0 +1,1462 @@
+@charset "UTF-8";
+/* tour.htmlはtour.cssに記載 */
+
+/* PC style */
+/* @media screen and (min-width: 769px) { */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: #dcd3b2;
+  font-family: "Source Serif Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HiraMinProN-W3",
+    "Noto Serif JP", "ＭＳ 明朝", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝",
+    "HG明朝E", serif;
+}
+
+section {
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 0;
+  max-width: 1080px;
+  width: 100%;
+}
+
+h1 {
+  line-height: 40px;
+  font-size: 85%;
+  font-weight: 700;
+  background-image: url(../image/flag.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 0px 10px;
+  padding-left: 45px;
+  cursor: pointer;
+}
+
+h1 a {
+  color: #000;
+  list-style: none;
+  text-decoration: none;
+}
+
+h2 {
+  display: inline-block;
+  text-align: center;
+  font-size: 3.5rem;
+  color: white;
+  background-color: #8f8b8b;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+
+h3 {
+  display: inline-block;
+  border-bottom: dotted;
+  font-size: 3rem;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+h4 {
+  display: inline-block;
+  font-size: 1.5rem;
+  border-bottom: dotted;
+}
+
+p {
+  text-align: left;
+  font-size: 16px;
+  line-height: 2;
+}
+
+/* 白枠ボタン
+----------------------------------- */
+.c-link {
+  max-width: 380px;
+  width: 100%;
+  border: double;
+  font-size: 13px;
+  padding: 10px 0;
+  margin: 50px auto 0;
+  background-color: #fff;
+}
+
+.c-link:hover {
+  color: white;
+  background-color: black;
+  border-color: transparent; /*borderのみ非表示*/
+  transition: all 0.5s ease;
+}
+
+.c-link p {
+  text-align: center;
+}
+
+/* .header
+----------------------------------- */
+header {
+  position: fixed;
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  align-items: flex-start; /* 必要に応じて調整 */
+  justify-content: space-between;
+  background-color: #d6be67;
+  box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+
+.header_top {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+form {
+  margin-left: 20px;
+}
+
+input {
+  color: #fff;
+}
+
+.search {
+  padding: 10px 10px 10px 20px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+address {
+  line-height: 1.5;
+  padding: 20px;
+  border: rgba(15, 5, 5, 0.3) 1px solid;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+/* .hamburger
+----------------------------------- */
+.hamburger {
+  display: none;
+}
+
+.menuSP {
+  display: none;
+}
+
+/* .nav
+----------------------------------- */
+nav ul li {
+  display: inline-block;
+  border-right: 1px solid;
+  padding: 0 15px;
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #259ac7;
+  border-bottom: 1px solid #259ac7;
+}
+
+.navSP {
+  display: none;
+}
+
+.mainPhoto {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes animationZoom {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.mainPhoto img {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transform: scale(1.4);
+  animation: animationZoom 15s ease-in-out infinite;
+}
+
+.main_title {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_title p {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+  text-shadow: 1px 2px 3px #000;
+}
+
+.slider_auto {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■
+最新情報
+■■■■■■■■■■■■■■■■■■■■■■■ */
+/* information
+  ------------------------------*/
+.information_title {
+  padding: 40px 0;
+  font-size: 24px;
+}
+
+.information ul {
+  background-color: wheat;
+  border-radius: 25px;
+  padding: 0 5%;
+  list-style: none;
+}
+
+.information_date {
+  color: #838383;
+  font-size: 14px;
+  width: 100px;
+  letter-spacing: 5px;
+}
+
+.information ul li {
+  padding: 20px 0;
+  border-bottom: 1px dotted #c3c3c3;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.information ul li:first-child {
+  border-top: 1px dotted #c3c3c3;
+}
+
+.information ul li:hover a {
+  transition: all 0.5s ease;
+  opacity: 0.4;
+}
+
+.information_tag {
+  width: 130px;
+  padding: 8px 0;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.information ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.information_listTop {
+  display: flex;
+  align-items: center;
+}
+
+.information_banner {
+  display: flex;
+  margin-top: 200px;
+  padding: 40px 0;
+  list-style: none;
+}
+
+.information_banner li {
+  position: relative;
+  width: 32%;
+  height: 173px;
+  margin: 0 14px;
+  background-color: black;
+}
+
+.information_bannerList img {
+  width: 100%;
+  height: 173px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  object-fit: cover;
+}
+
+.information_banner li:hover {
+  transition: all 0.5s ease;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.information_bannerTitle {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 19px;
+  color: #fff;
+  text-align: center;
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■
+エジプトについて
+■■■■■■■■■■■■■■■■■■■■■■■ */
+/* about
+------------------------------*/
+
+.about_top {
+  line-height: 1.7;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about_middle {
+  padding: 20px 0;
+}
+
+.about_middle ul {
+  list-style: none;
+  float: left;
+  margin-right: 5%;
+  text-align: left;
+}
+
+.about_middle li {
+  padding: 10px 0;
+}
+
+.about_bottom {
+  margin: 2px 0;
+  text-align: center;
+}
+
+.about_bottom h4 {
+  line-height: 3;
+}
+
+.about_bottom p {
+  padding-top: 20px;
+  line-height: 2;
+  text-align: left;
+}
+
+/* スライド画像 */
+/* slick.cssに記載あり */
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■
+エジプトの主要空港
+■■■■■■■■■■■■■■■■■■■■■■■ */
+/* airport
+------------------------------*/
+.airport_contents {
+  display: flex;
+}
+
+.airport_left {
+  position: relative;
+  width: 50%;
+  margin: 2px 0;
+}
+
+.arrow_slick {
+  position: absolute;
+  top: 45.5%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 15px;
+  background-image: url("../image/arrow_down.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.prev {
+  left: 5.5%;
+  transform: rotate(90deg);
+}
+
+.next {
+  right: 5.5%;
+  transform: rotate(-90deg);
+}
+
+.airport_contentsRight {
+  margin: 0 auto;
+  width: 50%;
+  line-height: 1.7;
+  padding-left: 20px;
+}
+
+.airport_contentsRight h3 {
+  display: block;
+  padding: 30px 22px;
+  font-size: 24px;
+  line-height: 1.8;
+}
+
+.airport_contentsRight > p {
+  margin: 0 22px 40px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■
+宿泊施設
+■■■■■■■■■■■■■■■■■■■■■■■ */
+
+/* room
+------------------------------*/
+.room ul {
+  display: flex;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.room ul li {
+  position: relative;
+  width: calc(100% / 3);
+  height: 250px;
+  margin: 0 2px;
+  background-color: black;
+}
+
+.roomImg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+.special {
+  background-image: url("../image/room/room1.jpg");
+}
+.western {
+  background-image: url("../image/room/room2.jpg");
+}
+.japanese {
+  background-image: url("../image/room/room3.jpg");
+}
+
+.room ul li:hover .roomImg {
+  opacity: 1;
+  transition: 0.6s;
+}
+
+.room ul li:hover .roomTitle {
+  opacity: 0;
+}
+
+.room ul li:hover .detail {
+  opacity: 1;
+}
+
+.room_hover {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 225px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border: rgba(255, 255, 255, 0.3) 1px solid;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.room_hover:hover {
+  opacity: 0;
+}
+
+.roomTitle {
+  top: 30%;
+  font-size: 28px;
+}
+
+.detail {
+  position: absolute;
+  top: 30%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.detail:hover {
+  color: black;
+  background-color: #fff;
+}
+
+.find {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.find:hover {
+  opacity: 1;
+  color: black;
+  background-color: #fff;
+}
+
+.room li:hover .room_capacity {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.roomTitle p,
+.room_hover > a {
+  margin: 0 auto;
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■
+大使館情報
+■■■■■■■■■■■■■■■■■■■■■■■ */
+/* embassy
+------------------------------*/
+
+.embassy_select {
+  display: flex;
+}
+
+.embassy_select li {
+  position: relative;
+  width: calc(100% / 3);
+  box-sizing: border-box;
+
+  border: double;
+  font-size: 16px;
+  padding: 10px 0;
+  margin: 0 10px;
+
+  list-style: none;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.embassy_select li:hover {
+  color: white;
+  background-color: black;
+  border-color: transparent; /*borderのみ非表示*/
+  transition: all 0.5s ease;
+}
+
+.embassyList {
+  margin: 60px auto 0;
+}
+
+.embassyList_cover {
+  display: flex;
+
+  list-style: none;
+  font-size: 24px;
+  color: white;
+}
+
+.embassyList_cover li {
+  position: relative;
+  height: 500px;
+  width: calc(100% / 3);
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: black;
+}
+
+.embassyList_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.embassyList_img:hover {
+  opacity: 0.7;
+}
+
+.openembassy {
+  background-image: url(../image/embassy/signature.jpg);
+}
+
+.bigembassy {
+  background-image: url(../image/embassy/immigre.jpg);
+  object-position: 85% center;
+}
+
+.hinokiembassy {
+  background-image: url(../image/embassy/translation.jpg);
+}
+
+.embassyList_hover {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  font-size: 16px;
+  color: black;
+  background-color: white;
+}
+
+.embassyList_hover p {
+  margin: 0 auto;
+}
+
+.is-hidden {
+  transition: 0.6s;
+  display: none;
+}
+
+/* passport
+------------------------------*/
+.passport {
+  line-height: 1.7;
+  margin-right: 20px;
+}
+
+.passport h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.passport p {
+  font-size: 14px;
+  text-align: left;
+}
+
+.passport img {
+  float: right;
+  margin-left: 10px;
+  width: 50%;
+}
+
+/* About
+------------------------------*/
+.embassyAbout {
+  display: flex;
+  margin-top: 50px;
+}
+
+.embassyAbout ul {
+  width: 800px;
+  list-style: none;
+}
+
+.embassyAbout ul li {
+  padding: 20px 0;
+  line-height: 180%;
+  text-align: left;
+}
+
+.embassyAbout_title {
+  align-items: center;
+}
+
+.embassyAbout_title p {
+  width: 230px;
+  border-left: double;
+  font-size: 18px;
+  padding-left: 28px;
+  margin-right: 30px;
+  line-height: 50px;
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■
+お問い合わせ
+■■■■■■■■■■■■■■■■■■■■■■■ */
+
+.content {
+  background: linear-gradient(to bottom, #f3f9ea, #d6be67);
+  padding: 40px 0;
+}
+
+.contact_description {
+  text-align: left;
+  margin: 40px;
+}
+
+.contact_description p {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.description_caution {
+  color: red;
+  margin-top: 10px;
+}
+
+.contact_cover {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#contact_form {
+  padding: 0 40px;
+  margin-top: 40px;
+}
+
+.contact .visual_img {
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+}
+
+table {
+  text-align: left;
+}
+
+table th {
+  width: 280px;
+  font-size: 1.3rem;
+  text-align: left;
+  padding: 10px 0;
+}
+
+table td {
+  font-size: 1.6rem;
+  padding: 10px 20px;
+}
+
+/* form
+------------------------------*/
+input {
+  font-size: 1.6rem;
+  padding: 5px;
+}
+
+form span {
+  background-color: #f00;
+  color: #fff;
+  font-size: 1.4rem;
+  margin-right: 5%;
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+.span_black {
+  background-color: #7e7e7e;
+  color: #fff;
+  font-size: 1.4rem;
+  margin-right: 5%;
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+td label {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+input[type="text"] {
+  width: 150px;
+}
+
+input#mail {
+  margin-bottom: 10px;
+}
+
+select {
+  font-size: 1.6rem;
+  padding: 5px;
+}
+
+textarea {
+  font-size: 1.6rem;
+  width: 500px;
+  padding: 5px;
+  box-sizing: border-box;
+  resize: none;
+  vertical-align: bottom;
+}
+
+.send input {
+  width: 200px;
+}
+
+/* privacy
+------------------------------*/
+.privacy {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.privacy h3 {
+  text-align: center;
+  padding: 20px;
+}
+
+.privacy_content {
+  width: 720px;
+  height: 400px;
+  border: #000000 solid 1px;
+  overflow-x: scroll;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.confirm {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.send_btn {
+  text-align: center;
+  padding: 40px;
+}
+
+.policy_button {
+  width: 140px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  margin: 0 20px;
+  box-shadow: #7f8681 2px 2px 2px;
+}
+
+.policy_button:hover {
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.reset {
+  background-color: #5d5c5c;
+}
+
+.send {
+  background-color: red;
+}
+/* .check_button
+------------------------------*/
+.check_button {
+  display: flex;
+  align-items: center;
+  margin: 30px auto;
+  width: 170px;
+  height: 50px;
+  background-color: #fcfafc;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-color: #fff 2px solid;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.check_button a {
+  display: block;
+  color: #080808;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.check_button:hover {
+  opacity: 0.7;
+}
+
+.para_content {
+  min-height: 400px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.para_content.img_bg_01 {
+  background-image: url(../image/para/tomb_1280.jpg);
+}
+.para_content.img_bg_02 {
+  background-image: url(../image/para/pyramids-sfinks_1280.jpg);
+}
+.para_content.img_bg_03 {
+  background-image: url(../image/para/camel_1280.jpg);
+}
+.para_content.img_bg_04 {
+  background-image: url(../image/para/egypt-lake_1280.jpg);
+}
+
+/* maintenance
+------------------------------*/
+.maintenance {
+  max-width: 1280px;
+  width: 100%;
+}
+
+.maintenance_cover p {
+  position: relative;
+  font-size: 45px;
+}
+
+.maintenance img {
+  width: 500px;
+  height: 500px;
+}
+
+.top_button {
+  margin: 0 auto;
+  width: 400px;
+  padding: 10px 0;
+  background-color: #000;
+}
+
+.top_button:hover {
+  opacity: 0.7;
+}
+
+.top_button p {
+  text-align: center;
+  color: #fff;
+}
+
+.top_button a {
+  text-decoration: none;
+}
+
+/* footer
+------------------------------*/
+footer {
+  background-color: #abb8c330;
+  font-family: "Source Serif Pro", "游明朝", "Yu Mincho", "游明朝体", "YuMincho",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HiraMinProN-W3",
+    "Noto Serif JP", "ＭＳ 明朝", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝",
+    "HG明朝E", serif;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer_top {
+  display: flex;
+  max-width: 1080px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.footer_top ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer_top ul li {
+  margin: 0 3px;
+  padding: 0 10px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.footer_top ul li:hover {
+  color: #259ac7;
+  border-bottom: 1px solid #259ac7;
+}
+
+.footer_bottom {
+  font-size: 12px;
+  padding: 30px 0;
+  background-color: black;
+  color: #fff;
+}
+
+small {
+  margin: 0 auto;
+}
+
+/* SP style */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    position: sticky;
+    width: 100%;
+    max-width: 768px;
+  }
+
+  section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10% 20px;
+  }
+
+  .c-link {
+    width: 100%;
+    padding: 0;
+    margin: 30px auto;
+    box-sizing: border-box;
+  }
+
+  .c-link p {
+    text-align: center;
+    padding: 3% 0;
+    margin: 0 auto;
+  }
+
+  h2 {
+    display: block;
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  br {
+    display: none;
+  }
+
+  /* .header
+  ----------------------------------- */
+  header {
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .header_top {
+    width: 100%;
+    padding-bottom: 0;
+    display: block;
+  }
+
+  /* .nav
+  ----------------------------------- */
+
+  nav {
+    display: none;
+  }
+
+  .main_title p {
+    font-size: 2rem;
+  }
+
+  .slider_auto {
+    width: 100%;
+  }
+
+  /* .catch copy
+  ----------------------------------- */
+
+  /* ■■■■■■■■■■■■■■■■■■■■■■■
+  最新情報
+  ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+  /* information
+    ------------------------------*/
+
+  .information ul li a {
+    display: block;
+  }
+
+  .information_listTop {
+    margin-bottom: 10px;
+  }
+
+  /* .hamburger
+  ----------------------------------- */
+
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+  }
+
+  .hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color: #000;
+    transition: all 0.5s ease;
+  }
+
+  .header_top form {
+    display: none;
+  }
+
+  .bar1 {
+    top: 0;
+  }
+
+  .bar2 {
+    top: 15px;
+  }
+
+  .bar3 {
+    bottom: 0;
+  }
+
+  .bar1.open {
+    top: 17px;
+    transform: rotate(45deg);
+  }
+
+  .bar2.open {
+    opacity: 0;
+  }
+
+  .bar3.open {
+    top: 17px;
+    transform: rotate(-45deg);
+  }
+
+  /* .menuSP
+  ------------------------------*/
+  .menuSP {
+    display: none;
+    position: fixed;
+    top: 79px;
+    width: 100%;
+    z-index: 4;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(220 211 178 / 95%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .menuSP form {
+    margin-left: 0;
+  }
+
+  .menuSP address {
+    display: block;
+    padding: 20px 40px;
+    margin: 20px 0;
+  }
+
+  .menuSP ul li {
+    margin: 10px 0;
+  }
+
+  .menuSP ul li a {
+    color: #000;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  /* ■■■■■■■■■■■■■■■■■■■■■■■
+  エジプトについて
+  ■■■■■■■■■■■■■■■■■■■■■■■ */
+  /* about
+  ------------------------------*/
+
+  .about_middle img {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .about_bottom p {
+    margin: 0 auto;
+  }
+
+  /* スライド画像 */
+  /* slick.cssに記載あり */
+
+  /* ■■■■■■■■■■■■■■■■■■■■■■■
+  エジプトの主要空港
+  ■■■■■■■■■■■■■■■■■■■■■■■ */
+  /* airport
+  ------------------------------*/
+  .airport {
+    padding-bottom: 0;
+  }
+
+  .airport_contents {
+    width: 100%;
+    display: block;
+  }
+
+  .airport_left {
+    width: 100%;
+  }
+
+  .slider_manual img {
+    width: 100%;
+  }
+
+  .airport_contentsRight {
+    width: 100%;
+    padding: 0;
+  }
+
+  .airport_contentsRight h3 {
+    padding: 0;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1.8;
+  }
+
+  .airport_contentsRight > p {
+    text-align: left;
+    margin: 0;
+    font-size: 13px;
+  }
+
+  /* ■■■■■■■■■■■■■■■■■■■■■■■
+  宿泊施設
+  ■■■■■■■■■■■■■■■■■■■■■■■ */
+  /* room
+  ------------------------------*/
+  .room_list {
+    display: block;
+  }
+
+  .room ul {
+    display: block;
+    width: 100%;
+  }
+
+  .room ul li {
+    width: 100%;
+    margin: 0 auto 10px;
+  }
+
+  .embassy_select li {
+    width: 100%;
+    margin: 0 auto 10px;
+    font-size: 15px;
+    background-color: #fff;
+  }
+
+  .embassyAbout {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .embassyAbout ul {
+    width: 90%;
+  }
+
+  .embassyList_cover {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .embassyList_cover li {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0;
+  }
+
+  /* ■■■■■■■■■■■■■■■■■■■■■■■
+  大使館情報
+  ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+  /* embassy
+  ------------------------------*/
+
+  .embassy_select {
+    display: block;
+    box-sizing: border-box;
+  }
+
+  /* passport
+  ------------------------------*/
+  .passport {
+    margin: 0 auto;
+  }
+
+  .passport img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .embassyList_hover {
+    background-color: none;
+  }
+
+  .embassyAbout_top {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .embassyAbout_bottom {
+    display: block;
+    margin-top: 50px;
+  }
+
+  .embassyAbout_right {
+    width: 100%;
+  }
+
+  .embassyAbout_right li {
+    width: 100%;
+  }
+
+  .embassyAbout_right p {
+    width: 100%;
+  }
+  /* ■■■■■■■■■■■■■■■■■■■■■■■
+  お問い合わせ
+  ■■■■■■■■■■■■■■■■■■■■■■■ */
+
+  address {
+    display: none;
+  }
+
+  table {
+    margin-bottom: 40px;
+  }
+
+  textarea {
+    width: 100%;
+  }
+  tr {
+    display: block;
+  }
+  td {
+    display: flex;
+  }
+
+  section {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* form
+  ------------------------------*/
+  #contact_form {
+    padding: 0;
+    margin-left: 0;
+  }
+
+  /* privacy
+  ------------------------------*/
+  .privacy {
+    width: 100%;
+  }
+
+  .privacy_content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* check_button
+  ------------------------------*/
+  .send_btn {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  table td {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  /* para
+  ------------------------------*/
+  .para_content {
+    min-height: 200px;
+  }
+
+  /* maintenance
+------------------------------*/
+  .maintenance_cover p {
+    font-size: 100%;
+  }
+
+  .maintenance img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .top_button {
+    margin: 0 auto;
+    width: 40%;
+    padding: 10px 0;
+    background-color: #000;
+  }
+
+  /* footer
+  ------------------------------*/
+  footer h1 {
+    background-position: 15% 40%;
+    padding-left: 0;
+  }
+
+  .footer_top {
+    display: block;
+    text-align: center;
+  }
+
+  .footer_top ul {
+    display: block;
+  }
+
+  .footer_top ul li {
+    border-bottom: none;
+    line-height: 2;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer_top ul li:hover {
+    color: #259ac7;
+    border-bottom: none;
+  }
+
+  .footer_bottom {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer_bottomCover {
+    width: 100%;
+    display: block;
+  }
+}
