@@ -2,7 +2,7 @@
 /* tour.htmlはtour.cssに記載 */
 
 /* PC style */
-/* @media screen and (min-width: 769px) { */
+
 body {
   position: relative;
   overflow-x: hidden;
@@ -46,16 +46,15 @@ h1 a {
 h2 {
   display: inline-block;
   text-align: center;
-  font-size: 3.5rem;
-  color: white;
-  background-color: #8f8b8b;
+  font-size: 3.3rem;
+  border-bottom: dotted;
+  line-height: 1.5;
   padding: 5px;
   margin-bottom: 50px;
 }
 
 h3 {
   display: inline-block;
-  border-bottom: dotted;
   font-size: 3rem;
   line-height: 1.5;
   margin: 10px 0;
@@ -63,8 +62,7 @@ h3 {
 
 h4 {
   display: inline-block;
-  font-size: 1.5rem;
-  border-bottom: dotted;
+  font-size: 1.2rem;
 }
 
 p {
@@ -183,6 +181,13 @@ nav ul li a:hover {
   position: relative;
   align-items: center;
   justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 @keyframes animationZoom {
@@ -201,6 +206,36 @@ nav ul li a:hover {
   transform: scale(1.4);
   animation: animationZoom 15s ease-in-out infinite;
 }
+
+.classified_img{
+  background-image: url('../image/classified/classified_topImage.jpg');
+}
+
+.contact_img{
+background-image: url('../image/contact/contact_topImage.jpg');
+}
+
+.gourmet_img{
+  background-image: url('../image/gourmet/gourmet_topImage.jpg');
+}
+
+.hotel_img{
+  background-image: url('../image/room/room_topImage.jpg');
+}
+
+.study_img{
+  background-image: url('../image/study/study_topImage.jpg');
+}
+
+.tour_img{
+background-image: url("../image/tour/tour_img.jpg");
+}
+
+.traffic_img{
+  background-image: url("../image/traffic/traffic_img.jpg");
+}
+
+
 
 .main_title {
   position: absolute;
@@ -905,16 +940,16 @@ textarea {
 }
 
 .para_content.img_bg_01 {
-  background-image: url(../image/para/tomb_1280.jpg);
+  background-image: url(../image/para/tomb.jpg);
 }
 .para_content.img_bg_02 {
-  background-image: url(../image/para/pyramids-sfinks_1280.jpg);
+  background-image: url(../image/para/pyramids-sfinks.jpg);
 }
 .para_content.img_bg_03 {
-  background-image: url(../image/para/camel_1280.jpg);
+  background-image: url(../image/para/camel.jpg);
 }
 .para_content.img_bg_04 {
-  background-image: url(../image/para/egypt-lake_1280.jpg);
+  background-image: url(../image/para/egypt-lake.jpg);
 }
 
 /* maintenance

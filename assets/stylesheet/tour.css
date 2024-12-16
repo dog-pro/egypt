@@ -32,6 +32,11 @@
   background-color: #000;
 }
 
+.tour_topTitle{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .tour_top h3 {
   line-height: 3;
 }
